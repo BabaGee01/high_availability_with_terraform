@@ -20,5 +20,6 @@ systemctl enable httpd #enable Apache service
 echo "Hello World from $(hostname -f)" > /var/www/html/index.html  #Create a simple homepage
 echo "Healthy" > /var/www/html/health.html #health check page
 
+
 # MySQL client command to show databases
 mysql -h ${aws_db_instance.default[0].address} -P 3306 -u ${var.db_username} -p${var.db_password} -e 'show databases;'
